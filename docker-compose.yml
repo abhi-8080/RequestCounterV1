@@ -1,0 +1,11 @@
+version: '2'
+services:
+  q-counter:
+    container_name: q-counter
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: q-counter:latest
+    ports:
+      - "8080:8080"
+
