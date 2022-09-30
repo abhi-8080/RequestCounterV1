@@ -15,7 +15,7 @@ internal class SimpleCounterTest {
     }
 
     @Test
-    fun `get next valshould return the next increment`() {
+    fun `get next val should return the next increment`() {
         IntStream.range(1, 10).forEach { expected ->
             Assertions.assertThat(counter.getNextVal()).isEqualTo(expected)
         }
