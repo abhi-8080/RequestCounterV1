@@ -36,3 +36,10 @@ To generate load you can use the following apache workbench request:
 ## Troubleshooting
 In case docker container does not start, check the container logs. 
 Verify there are no port clashes. If required make changes in `docker-compose.yml` to set the correct host port.
+
+## Updating releases
+To keep dependencies updated at all times use the following maven commands
+```shell
+.\mvnw versions:update-parent 
+.\mvnw versions:use-latest-releases  
+```
