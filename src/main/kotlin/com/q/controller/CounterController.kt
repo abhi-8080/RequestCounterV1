@@ -10,7 +10,6 @@ import java.util.concurrent.Executor
 class CounterController(val counter: IAtomicCounter, val counterExecutor: Executor) {
 
     @GetMapping("count")
-    fun getNextSequence(): CompletableFuture<Int> {
-        return CompletableFuture.supplyAsync({ counter.getNextVal() }, counterExecutor)
-    }
+    fun getNextSequence(): CompletableFuture<Int> =
+        CompletableFuture.supplyAsync({ counter.getNextVal() }, counterExecutor)
 }
